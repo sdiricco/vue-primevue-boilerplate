@@ -1,17 +1,16 @@
 /*****************************************************************************/
 /* PRIME VUE CSS */
 /*****************************************************************************/
-import "primevue/resources/primevue.min.css";
 import "primeicons/primeicons.css";
 import "/node_modules/primeflex/primeflex.css";
 
-import "@/assets/styles/index.css"
+import "@/assets/styles/index.css";
 
-import { createApp } from 'vue'
-import { createPinia } from 'pinia'
-import PrimeVue from 'primevue/config';
-import App from './App.vue'
-import router from './router'
+import { createApp } from "vue";
+import { createPinia } from "pinia";
+import PrimeVue from "primevue/config";
+import App from "./App.vue";
+import router from "./router";
 
 /*****************************************************************************/
 /* PRIME VUE - IMPORT COMPONENTS */
@@ -24,7 +23,7 @@ import AvatarGroup from "primevue/avatargroup";
 import Badge from "primevue/badge";
 import Breadcrumb from "primevue/breadcrumb";
 import Button from "primevue/button";
-import BlockUI from 'primevue/blockui';
+import BlockUI from "primevue/blockui";
 import Calendar from "primevue/calendar";
 import Card from "primevue/card";
 import Carousel from "primevue/carousel";
@@ -44,6 +43,8 @@ import InputMask from "primevue/inputmask";
 import InputNumber from "primevue/inputnumber";
 import InputSwitch from "primevue/inputswitch";
 import InputText from "primevue/inputtext";
+import IconField from "primevue/iconfield";
+import InputIcon from "primevue/inputicon";
 import Knob from "primevue/knob";
 import Menu from "primevue/menu";
 import Message from "primevue/message";
@@ -57,7 +58,7 @@ import Rating from "primevue/rating";
 import SelectButton from "primevue/selectbutton";
 import ScrollPanel from "primevue/scrollpanel";
 import Sidebar from "primevue/sidebar";
-import Skeleton from 'primevue/skeleton';
+import Skeleton from "primevue/skeleton";
 import Slider from "primevue/slider";
 import TabMenu from "primevue/tabmenu";
 import TabPanel from "primevue/tabpanel";
@@ -75,14 +76,13 @@ import StyleClass from "primevue/styleclass";
 import Ripple from "primevue/ripple";
 import BadgeDirective from "primevue/badgedirective";
 
-const app = createApp(App)
+const app = createApp(App);
 
-app.use(createPinia())
-app.use(router)
-app.use(PrimeVue);
+app.use(createPinia());
+app.use(router);
+app.use(PrimeVue, { ripple: true });
 app.use(ToastService);
-app.mount('#app')
-
+app.mount("#app");
 
 /*****************************************************************************/
 /* PRIME VUE - COMPONENTS */
@@ -115,6 +115,8 @@ app.component("InputMask", InputMask);
 app.component("InputNumber", InputNumber);
 app.component("InputSwitch", InputSwitch);
 app.component("InputText", InputText);
+app.component("IconField", IconField);
+app.component("InputIcon", InputIcon);
 app.component("Knob", Knob);
 app.component("Menu", Menu);
 app.component("Message", Message);
@@ -145,8 +147,3 @@ app.directive("styleclass", StyleClass);
 app.directive("ripple", Ripple);
 app.directive("badge", BadgeDirective);
 app.directive("tooltip", Tooltip);
-
-
-
-
-
